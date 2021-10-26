@@ -8,7 +8,7 @@ Staring Kafka Server
 ./kafka-server-start.sh ../config/server.properties 
 
 Create Topic
-./kafkt-opics.sh --create --topic testtopic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
+./kafka-topics.sh --create --topic testtopic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
 
 Listing all the topics
 ./kafka-topics.sh --list --bootstrap-server localhost:9092
