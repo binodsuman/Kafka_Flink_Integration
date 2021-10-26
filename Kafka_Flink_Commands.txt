@@ -1,0 +1,29 @@
+cd /Users/binod/Documents/software/kafka_2.13-3.0.0/bin
+
+Starting Zookeeper
+./zookeeper-server-start.sh ../config/zookeeper.properties 
+
+
+Staring Kafka Server
+./kafka-server-start.sh ../config/server.properties 
+
+Create Topic
+./kafktopics.sh --create --topic testtopic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
+
+Listing all the topics
+./kafka-topics.sh --list --bootstrap-server localhost:9092
+
+
+Create Kafka Console Producer:
+./kafka-console-producer.sh --topic testtopic --bootstrap-server localhost:9092
+
+Create Kafka Console Consumer:
+./kafka-console-consumer.sh --topic testtopic_output --from-beginning --bootstrap-server localhost:9092
+
+Starting Apache Link
+cd /Users/binod/Documents/software/flink-1.14.0/bin
+./start-cluster.sh
+
+Localhost:8081
+
+
